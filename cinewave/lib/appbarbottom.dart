@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cinewave/film.dart';
 import 'package:cinewave/main.dart';
 import 'appbar.dart';
-import 'login.dart';
+import 'screens/login_page.dart';
 
 class BottomBar extends StatefulWidget {
   @override
@@ -23,7 +23,7 @@ class _BottomBarState extends State<BottomBar> {
     ),
     Scaffold(
       appBar: MyAppBar(),
-      body: const LoginPage(),
+      body: LoginPage(),
     ),
   ];
 

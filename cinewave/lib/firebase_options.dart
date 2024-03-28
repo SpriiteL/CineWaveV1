@@ -44,38 +44,37 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAVudgIQxUSUoiVzcb4TrI3OcnNgQ9-bIk',
-    appId: '1:263078464216:web:6a6492e98fa8284df1a5ad',
-    messagingSenderId: '263078464216',
-    projectId: 'cinewavev1',
-    authDomain: 'cinewavev1.firebaseapp.com',
-    storageBucket: 'cinewavev1.appspot.com',
-    measurementId: 'G-M0XZHS08S2',
+    apiKey: 'AIzaSyAGqC0Nrb6D3Jy6RjEP0RlSdsOrvxmM71M',
+    appId: '1:601897914244:web:25b33d20dd6050220dd7d1',
+    messagingSenderId: '601897914244',
+    projectId: 'cinewave-59b96',
+    authDomain: 'cinewave-59b96.firebaseapp.com',
+    storageBucket: 'cinewave-59b96.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDdordSZugRhaBCydEgH7qUFpa0SC2Jh1g',
-    appId: '1:263078464216:android:b43de2f55159f37ff1a5ad',
-    messagingSenderId: '263078464216',
-    projectId: 'cinewavev1',
-    storageBucket: 'cinewavev1.appspot.com',
+    apiKey: 'AIzaSyAl3ah-_vrTxEldxQymw7UrFMb3ONNfHNc',
+    appId: '1:601897914244:android:fbcff13e57e8dba90dd7d1',
+    messagingSenderId: '601897914244',
+    projectId: 'cinewave-59b96',
+    storageBucket: 'cinewave-59b96.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD2PQPc5AtE24qt04ClzstdEPtz4_bGX9U',
-    appId: '1:263078464216:ios:a379803064b39f56f1a5ad',
-    messagingSenderId: '263078464216',
-    projectId: 'cinewavev1',
-    storageBucket: 'cinewavev1.appspot.com',
+    apiKey: 'AIzaSyCZZC5qBjOmdg54uwKmvdybD6hhMaf2elE',
+    appId: '1:601897914244:ios:0ab5e2fd6d5181fa0dd7d1',
+    messagingSenderId: '601897914244',
+    projectId: 'cinewave-59b96',
+    storageBucket: 'cinewave-59b96.appspot.com',
     iosBundleId: 'com.example.cinewave',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyD2PQPc5AtE24qt04ClzstdEPtz4_bGX9U',
-    appId: '1:263078464216:ios:05fe1bbde2c71bc3f1a5ad',
-    messagingSenderId: '263078464216',
-    projectId: 'cinewavev1',
-    storageBucket: 'cinewavev1.appspot.com',
+    apiKey: 'AIzaSyCZZC5qBjOmdg54uwKmvdybD6hhMaf2elE',
+    appId: '1:601897914244:ios:6a0a30951c4accf20dd7d1',
+    messagingSenderId: '601897914244',
+    projectId: 'cinewave-59b96',
+    storageBucket: 'cinewave-59b96.appspot.com',
     iosBundleId: 'com.example.cinewave.RunnerTests',
   );
 }

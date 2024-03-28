@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "263078464216",
-    "project_id": "cinewavev1",
-    "storage_bucket": "cinewavev1.appspot.com"
+    "project_number": "601897914244",
+    "project_id": "cinewave-59b96",
+    "storage_bucket": "cinewave-59b96.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:263078464216:android:b43de2f55159f37ff1a5ad",
+        "mobilesdk_app_id": "1:601897914244:android:fbcff13e57e8dba90dd7d1",
         "android_client_info": {
           "package_name": "com.example.cinewave"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDdordSZugRhaBCydEgH7qUFpa0SC2Jh1g"
+          "current_key": "AIzaSyAl3ah-_vrTxEldxQymw7UrFMb3ONNfHNc"
         }
       ],
       "services": {
