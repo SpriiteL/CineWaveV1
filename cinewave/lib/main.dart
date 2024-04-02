@@ -33,8 +33,8 @@ class MainBody extends StatefulWidget {
 
 class _MainBodyState extends State<MainBody> {
   late final PageController _pageController;
-  final int _numPages = 1; // Nombre total d'images dans la première rangée
-  int _currentPage = 1;
+  final int _numPages = 4; // Nombre total d'images dans la première rangée
+  int _currentPage = 0;
 
   @override
   void initState() {
@@ -94,8 +94,8 @@ class _MainBodyState extends State<MainBody> {
       [
         'BANNIERE/avatar2.jpeg',
         'BANNIERE/maxresdefault.jpg',
-        'BANNIERE/mowgli.jpeg',
         'BANNIERE/ca.jpg',
+        'BANNIERE/mowgli.jpeg',
       ],
     ];
 
@@ -138,10 +138,10 @@ class _MainBodyState extends State<MainBody> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 20),
+                  SizedBox(height: 0),
                   // First ensemble d'images
                   SizedBox(
-                    height: 150,
+                    height: 200,
                     child: PageView.builder(
                       controller: _pageController,
                       scrollDirection: Axis.horizontal,
