@@ -51,9 +51,6 @@ class _LoginPageState extends State<LoginPage> {
         _focusPassword.unfocus();
       },
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Firebase Authentication'),
-        ),
         body: FutureBuilder(
           future: _initializeFirebase(),
           builder: (context, snapshot) {

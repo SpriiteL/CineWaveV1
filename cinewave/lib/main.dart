@@ -21,6 +21,15 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: const Color(0xFF002B53),
+        hintColor: const Color(0xFF002B53),
+        scaffoldBackgroundColor: const Color(0xFF001E3A),
+        textTheme: const TextTheme(
+          bodyText1: TextStyle(color: Colors.white),
+          bodyText2: TextStyle(color: Colors.white),
+        ),
+      ),
       home: BottomBar(),
     );
   }
@@ -142,7 +151,7 @@ class _MainBodyState extends State<MainBody> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 0),
-                  // First ensemble d'images
+
                   SizedBox(
                     height: 200,
                     child: PageView.builder(
@@ -180,7 +189,11 @@ class _MainBodyState extends State<MainBody> {
                     ),
                   ),
                   
-                  // Second ensemble d'images
+                  const Text('ACTION',
+                  style: TextStyle(
+                      fontSize: 20, // Augmentez cette valeur pour augmenter la taille de la police
+                    ),
+                  ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -220,7 +233,11 @@ class _MainBodyState extends State<MainBody> {
                     ),
                   ),
                   SizedBox(height: 20),
-                  // Troisième ensemble d'images
+                  const Text('HORREUR',
+                  style: TextStyle(
+                      fontSize: 20, // Augmentez cette valeur pour augmenter la taille de la police
+                    ),
+                  ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -260,7 +277,11 @@ class _MainBodyState extends State<MainBody> {
                     ),
                   ),
                   SizedBox(height: 20),
-                  // Quatrième ensemble d'images
+                  const Text('FAMILLE',
+                  style: TextStyle(
+                      fontSize: 20, // Augmentez cette valeur pour augmenter la taille de la police
+                    ),
+                  ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(

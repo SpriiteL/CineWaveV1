@@ -49,6 +49,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '601897914244',
     projectId: 'cinewave-59b96',
     authDomain: 'cinewave-59b96.firebaseapp.com',
+    databaseURL: 'https://cinewave-59b96-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'cinewave-59b96.appspot.com',
   );
 
@@ -57,6 +58,7 @@ class DefaultFirebaseOptions {
     appId: '1:601897914244:android:fbcff13e57e8dba90dd7d1',
     messagingSenderId: '601897914244',
     projectId: 'cinewave-59b96',
+    databaseURL: 'https://cinewave-59b96-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'cinewave-59b96.appspot.com',
   );
 
@@ -65,6 +67,7 @@ class DefaultFirebaseOptions {
     appId: '1:601897914244:ios:0ab5e2fd6d5181fa0dd7d1',
     messagingSenderId: '601897914244',
     projectId: 'cinewave-59b96',
+    databaseURL: 'https://cinewave-59b96-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'cinewave-59b96.appspot.com',
     iosBundleId: 'com.example.cinewave',
   );
@@ -74,6 +77,7 @@ class DefaultFirebaseOptions {
     appId: '1:601897914244:ios:6a0a30951c4accf20dd7d1',
     messagingSenderId: '601897914244',
     projectId: 'cinewave-59b96',
+    databaseURL: 'https://cinewave-59b96-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'cinewave-59b96.appspot.com',
     iosBundleId: 'com.example.cinewave.RunnerTests',
   );
