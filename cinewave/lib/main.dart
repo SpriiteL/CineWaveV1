@@ -6,6 +6,8 @@ import 'appbarbottom.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'dart:async';
 
+import 'detailfilm.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -108,6 +110,7 @@ class _MainBodyState extends State<MainBody> {
 
     return imageUrls;
   }
+  
 
   // Function to get image URLs from Firebase Storage references
   Future<List<String>> _getImageUrlsFromRefs(List<String> imageRefs) async {
@@ -147,48 +150,151 @@ class _MainBodyState extends State<MainBody> {
                       scrollDirection: Axis.horizontal,
                       itemCount: 4,
                       itemBuilder: (BuildContext context, int index) {
-                        return Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: Image.network(snapshot.data![3][index], fit: BoxFit.cover),
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FutureBuilder<Film>(
+                                  future: getFilmDetails(['Avatar2', 'oppenheimer', 'ça', 'mowgli']).then((films) => films[index]),
+                                  builder: (context, snapshot) {
+                                    if (snapshot.connectionState == ConnectionState.done) {
+                                      if (snapshot.hasError) {
+                                        return Text("Erreur : ${snapshot.error}");
+                                      }
+                                      return FilmDetailPage(film: snapshot.data!);
+                                    } else {
+                                      return const CircularProgressIndicator();
+                                    }
+                                  },
+                                ),
+                              ),
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(2.0),
+                            child: Image.network(snapshot.data![3][index], fit: BoxFit.cover),
+                          ),
                         );
                       },
                     ),
                   ),
-                  SizedBox(height: 20),
+                  
                   // Second ensemble d'images
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: snapshot.data![0].map((url) {
-                        return Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: Image.network(url, fit: BoxFit.cover, height: 150, width: 100),
+                      children: snapshot.data![0].asMap().entries.map((entry) {
+                        var index = entry.key;
+                        var url = entry.value;
+
+                        return GestureDetector(
+                          onTap: () {
+                            // Ajoutez ici la navigation vers la page de détails du film
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FutureBuilder<Film>(
+                                  future: getFilmDetails(['UnHommeEnColère', 'Avengers', 'TheMeg', 'Uncharted']).then((films) => films[index]),
+ // Utilisez l'index pour obtenir l'ID du film correspondant
+                                  builder: (context, snapshot) {
+                                    if (snapshot.connectionState == ConnectionState.done) {
+                                      if (snapshot.hasError) {
+                                        return Text("Erreur : ${snapshot.error}");
+                                      }
+                                      return FilmDetailPage(film: snapshot.data!);
+                                    } else {
+                                      return const CircularProgressIndicator();
+                                    }
+                                  },
+                                ),
+                              ),
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(2.0),
+                            child: Image.network(url, fit: BoxFit.cover, height: 150, width: 100),
+                          ),
                         );
                       }).toList(),
                     ),
                   ),
                   SizedBox(height: 20),
-                  // Third ensemble d'images
+                  // Troisième ensemble d'images
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: snapshot.data![1].map((url) {
-                        return Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: Image.network(url, fit: BoxFit.cover, height: 150, width: 100),
+                      children: snapshot.data![1].asMap().entries.map((entry) {
+                        var index = entry.key;
+                        var url = entry.value;
+
+                        return GestureDetector(
+                          onTap: () {
+                            // Ajoutez ici la navigation vers la page de détails du film
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FutureBuilder<Film>(
+                                  future: getFilmDetails(['us', 'proiedudiable', 'conjuring', 'nonne']).then((films) => films[index]),
+ // Utilisez l'index pour obtenir l'ID du film correspondant
+                                  builder: (context, snapshot) {
+                                    if (snapshot.connectionState == ConnectionState.done) {
+                                      if (snapshot.hasError) {
+                                        return Text("Erreur : ${snapshot.error}");
+                                      }
+                                      return FilmDetailPage(film: snapshot.data!);
+                                    } else {
+                                      return const CircularProgressIndicator();
+                                    }
+                                  },
+                                ),
+                              ),
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(2.0),
+                            child: Image.network(url, fit: BoxFit.cover, height: 150, width: 100),
+                          ),
                         );
                       }).toList(),
                     ),
                   ),
                   SizedBox(height: 20),
-                  // Fourth ensemble d'images
+                  // Quatrième ensemble d'images
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: snapshot.data![2].map((url) {
-                        return Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: Image.network(url, fit: BoxFit.cover, height: 150, width: 100),
+                      children: snapshot.data![2].asMap().entries.map((entry) {
+                        var index = entry.key;
+                        var url = entry.value;
+
+                        return GestureDetector(
+                          onTap: () {
+                            // Ajoutez ici la navigation vers la page de détails du film
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FutureBuilder<Film>(
+                                  future: getFilmDetails(['Naya', 'roilion', 'asterix', 'coco']).then((films) => films[index]),
+ // Utilisez l'index pour obtenir l'ID du film correspondant
+                                  builder: (context, snapshot) {
+                                    if (snapshot.connectionState == ConnectionState.done) {
+                                      if (snapshot.hasError) {
+                                        return Text("Erreur : ${snapshot.error}");
+                                      }
+                                      return FilmDetailPage(film: snapshot.data!);
+                                    } else {
+                                      return const CircularProgressIndicator();
+                                    }
+                                  },
+                                ),
+                              ),
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(2.0),
+                            child: Image.network(url, fit: BoxFit.cover, height: 150, width: 100),
+                          ),
                         );
                       }).toList(),
                     ),
