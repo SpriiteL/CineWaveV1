@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'appbar.dart';
-import 'appbarbottom.dart';
 
 class FilmPage extends StatelessWidget {
-  const FilmPage({Key? key}) : super(key: key);
+  const FilmPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +16,7 @@ class FilmPage extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
               ),
+              child: Image.asset('lib/assets/images/map.png'),
             ),
             Container(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
@@ -31,7 +30,7 @@ class FilmPage extends StatelessWidget {
                       color: const Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
-                  Text('Tarif', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                  const Text('Tarif', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -42,7 +41,7 @@ class FilmPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -63,7 +62,7 @@ class FilmPage extends StatelessWidget {
                       color: const Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
-                  Text('Contact', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                  const Text('Contact', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -74,7 +73,7 @@ class FilmPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20), // Espacement avant le formulaire
+            const SizedBox(height: 20), // Espacement avant le formulaire
             _buildContactForm(),
           ],
         ),
@@ -97,15 +96,15 @@ class FilmPage extends StatelessWidget {
             children: [
               Text(
                 text1,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Container(
                 height: 1,
                 width: 50,
                 color: Colors.white,
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Text(
                 text2,
                 style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),
@@ -123,30 +122,30 @@ class FilmPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Container(
-            padding: EdgeInsets.all(8.0),
-            child: Text('Adresse Mail'),
+            padding: const EdgeInsets.all(8.0),
+            child: const Text('Adresse Mail'),
           ),
           TextFormField(
-            decoration: InputDecoration(
-              fillColor: const Color.fromARGB(255, 154, 154, 154),
+            decoration: const InputDecoration(
+              fillColor:  Color.fromARGB(255, 154, 154, 154),
               filled: true,
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Container(
-            padding: EdgeInsets.all(8.0),
-            child: Text('Message'),
+            padding: const EdgeInsets.all(8.0),
+            child: const Text('Message'),
           ),
           TextFormField(
-            decoration: InputDecoration(
-              fillColor: const Color.fromARGB(255, 154, 154, 154),
+            decoration: const InputDecoration(
+              fillColor:  Color.fromARGB(255, 154, 154, 154),
               filled: true,
             ),
             maxLines: 4,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               // Action à effectuer lors du clic sur le bouton Envoyer
@@ -154,7 +153,7 @@ class FilmPage extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFF002B53), // Background color
             ),
-            child: Text('Envoyer', style: TextStyle(color: Colors.white)),
+            child: const Text('Envoyer', style: TextStyle(color: Colors.white)),
           ),
         ],
       ),
