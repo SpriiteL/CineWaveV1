@@ -46,8 +46,8 @@ class _BottomBarState extends State<BottomBar> {
             label: 'Accueil',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Films',
+            icon: Icon(Icons.info),
+            label: 'Autres',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
